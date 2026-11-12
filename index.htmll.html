@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kalkulator Belanja Toko</title>
+</head>
+<body>
+    <h2>Web Kalkulator Belanja Toko</h2>
+
+    <label for="pembeli">Nama Pembeli</label>
+    <input type="text" id="pembeli" placeholder="Masukkan nama pembeli">
+    <br><br>
+
+    <label for="harga">Harga Satuan</label>
+    <input type="number" id="harga" min="0" placeholder="Masukkan harga satuan">
+    <br><br>
+
+    <label for="jumlah">Jumlah Barang</label>
+    <input type="number" id="jumlah" min="1" value="1">
+    <br><br>
+
+    <label for="status">Status Pembelian</label>
+    <select id="status">
+        <option value="Biasa">Biasa</option>
+        <option value="Member">Member</option>
+    </select>
+    <br><br>
+
+    <button type="button" onclick="hitung()">Hitung Total</button>
+    <h3 id="hasil"></h3>
+
+    <h2>Aturan Diskon</h2>
+    <table border="1">
+        <tr>
+            <th>Subtotal</th>
+            <th>Diskon</th>
+        </tr>
+        <tr>
+            <td>Rp50.000 ke bawah</td>
+            <td>0%</td>
+        </tr>
+        <tr>
+            <td>Rp50.000 - Rp99.999</td>
+            <td>5%</td>
+        </tr>
+        <tr>
+            <td>Rp100.000 ke atas</td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td>Member</td>
+            <td>Tambahan 5%</td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
